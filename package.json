@@ -1,0 +1,19 @@
+{
+  "name": "@zooizooi/three-customize-material",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite -c ./vite.config-dev.js",
+    "build": "tsc && vite build -c ./vite.config-build.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-glsl": "^1.3.0",
+    "@zooizooi/eslint-config": "^1.0.5",
+    "@types/three": "^0.163.0"
+  },
+  "dependencies": {
+    "three": "^0.163.0"
+  }
+}
