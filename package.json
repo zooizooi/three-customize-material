@@ -2,13 +2,22 @@
   "name": "@zooizooi/three-customize-material",
   "version": "0.0.2",
   "type": "module",
+  "main": "./dist/customizeMaterial.js",
+  "types": "./dist/customizeMaterial.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
-    "dev": "vite -c ./vite.config-dev.js",
-    "build": "tsc && vite build -c ./vite.config-build.js"
+    "dev": "vite",
+    "build": "rollup -c"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/three": "^0.163.0",
     "@zooizooi/eslint-config": "^1.0.5",
+    "rollup": "^4.14.3",
+    "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.6.2",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-dts": "^3.8.2",
