@@ -71,7 +71,6 @@ function updateShader(shader: string, customShader: string) {
     const replacePartials = extractReplacePartials(customShader, 'replace');
     if (replacePartials) {
         replacePartials.forEach((partial) => {
-            console.log(partial);
             shader = shader.replace(partial.searchValue, partial.replaceValue);
         });
     }
@@ -79,13 +78,10 @@ function updateShader(shader: string, customShader: string) {
     // Append
     const appendPartials = extractPartial(customShader, 'append');
     if (appendPartials) {
-        shader = shader.replace(
-            /}/g,
-            `
-                ${appendPartials.join(' ')}
-                }
-            `
-        );
+        const lastIndex = shader.lastIndexOf('}');
+        if (lastIndex !== -1) {
+            shader = `${shader.substring(0, lastIndex)} ${appendPartials.join(' ')} } ${shader.substring(lastIndex + 1)}`;
+        }
     }
 
     return shader;
