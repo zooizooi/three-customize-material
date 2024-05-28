@@ -12,7 +12,7 @@ export default [
             },
         ],
 
-        external: ['thee'],
+        external: ['three'],
         plugins: [typescript()]
     },
     {
