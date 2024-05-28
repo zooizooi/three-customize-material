@@ -1,6 +1,6 @@
 {
   "name": "@zooizooi/three-customize-material",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "./dist/customizeMaterial.js",
   "types": "./dist/customizeMaterial.d.ts",
