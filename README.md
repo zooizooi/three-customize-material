@@ -3,6 +3,9 @@ Setup to customize Three.js materials
 
 ### Install
 ```bash
+# ni
+ni @zooizooi/three-customize-material
+
 # npm
 npm install @zooizooi/three-customize-material
 
